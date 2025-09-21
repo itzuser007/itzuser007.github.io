@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem 3rem;
+  border-radius: 22px;
+  box-shadow: 0 10px 40px #a88beb70;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.card h1 {
+  color: #7e4fff;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 11px #ceadfdc5;
+}
+
+.card p {
+  font-size: 1.25rem;
+  margin: 15px 0 20px 0;
+  color: #333;
+}
+
+.card button {
+  background: #7e4fff;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 3px 11px #bda8fd60;
+  transition: background 0.2s;
+}
+
+.card button:hover {
+  background: #6e3be9;
+}
+
+.confetti {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+}
+
+.cake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cake {
+  width: 240px;
+  height: 260px;
+  position: relative;
+  margin: 0 auto 16px auto;
+  filter: drop-shadow(0 10px 6px rgba(0, 0, 0, 0.15));
+}
+
+/* Cake layers */
+.bottom-layer,
+.middle-layer,
+.top-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.7), 0 10px 30px rgba(0, 0, 0, 0.15);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bottom-layer {
+  width: 220px;
+  height: 80px;
+  bottom: 0;
+  background: linear-gradient(145deg, #f9c2d9, #f16492);
+  box-shadow: 0 10px 20px #d16a8b;
+}
+
+.middle-layer {
+  width: 180px;
+  height: 70px;
+  bottom: 70px;
+  background: linear-gradient(145deg, #ffefca, #f9d56e);
+  box-shadow: 0 8px 18px #e6cd7c;
+}
+
+.top-layer {
+  width: 140px;
+  height: 60px;
+  bottom: 130px;
+  background: linear-gradient(145deg, #fd8b6a, #fc4a1a);
+  box-shadow: 0 6px 15px #d54a22;
+}
+
+/* Candles container */
+.candles {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+/* Candle style and stripes */
+.candle {
+  position: absolute;
+  width: 14px;
+  height: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fffbe9 0 4px,
+    #f7b4a7 4px 8px
+  );
+  border-radius: 7px 7px 3px 3px;
+  box-shadow: 0 0 3px 1px #ffbb99;
+}
+
+/* Candle flame with flicker effect */
+.flame {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 24px;
+  background: radial-gradient(
+    ellipse at center,
+    #fff5bb 25%,
+    #ff6f3c 45%,
+    #ff3300 95%
+  );
+  border-radius: 50% 50% 60% 60% / 90% 90% 100% 100%;
+  box-shadow: 0 0 14px 6px #ff7000cc;
+  animation: flicker 1.5s infinite alternate;
+  filter: drop-shadow(0 0 6px #ff8533cc);
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scale(1) translateY(0);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translateX(calc(-50% + 2px)) scale(1.12) translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(-50% - 2px)) scale(0.9) translateY(1px);
+    opacity: 0.92;
+  }
+}
+
+.cake-message {
+  color: #7e4fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 11px #ceadfd3d;
+  margin: 14px 0 0;
+  text-align: center;
+}

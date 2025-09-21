@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Radhe!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="confetti"></div>
+
+  <div class="card" id="greetCard">
+    <h1>🎈 HAPPY BIRTHDAY, <span id="sis-name">RADHE</span>! 🎂</h1>
+    <p>WISHING YOU AN AMAZING YEAR FILLED WITH LAUGHTER, MAGIC, AND ALL THE HAPPINESS IN THE WORLD.</p>
+    <button onclick="showCake()">🎉 Click for a Surprise!</button>
+  </div>
+
+  <div class="cake-container" id="cakeContainer" style="display:none;">
+    <div class="cake">
+      <div class="bottom-layer"></div>
+      <div class="middle-layer"></div>
+      <div class="top-layer"></div>
+      <div class="candles">
+        <div class="candle" style="left: 20px;"><div class="flame"></div></div>
+        <div class="candle" style="left: 60px;"><div class="flame"></div></div>
+        <div class="candle" style="left: 100px;"><div class="flame"></div></div>
+        <div class="candle" style="left: 140px;"><div class="flame"></div></div>
+        <div class="candle" style="left: 180px;"><div class="flame"></div></div>
+      </div>
+    </div>
+    <div class="cake-message">WISH ALL YOUR DREAMS COME TRUE...!!! 🎉🎉🎉</div>
+  </div>
+
+  <!-- Replace "happy-birthday-lovely.mp3" with your own loving Happy Birthday audio file -->
+  <audio id="bday-audio" src="happy-birthday-lovely.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
